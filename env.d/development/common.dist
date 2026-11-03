@@ -67,3 +67,10 @@ OIDC_TOKENS_ENCRYPTION_KEY=
 #MENSHEN_CLIENT_SECRET=
 #MENSHEN_AUDIENCE=
 #MENSHEN_SCOPE=
+
+# upload-broker (tribu destination): sends the archives to Tribu. To use it,
+# add core.destinations.tribu.backend.TribuDestinationBackend to
+# DESTINATION_BACKENDS.
+#UPLOAD_BROKER_URL=
+#UPLOAD_BROKER_AUDIENCE=
+#UPLOAD_BROKER_SCOPE=

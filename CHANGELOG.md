@@ -13,6 +13,8 @@ and this project adheres to
 - Add a `menshen` Drive auth mode (`DRIVE_AUTH_MODE=menshen`): the user's
   ProConnect token is exchanged for a Drive-scoped token (RFC 8693) via
   Menshen (`MENSHEN_*` settings), then used on the Drive external API
+- Add a `tribu` destination. It sends the workspace archive to Tribu through
+  upload-broker (`UPLOAD_BROKER_*` settings). The token comes from Menshen
 
 ### Changed
 

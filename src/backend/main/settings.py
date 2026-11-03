@@ -328,6 +328,17 @@ class Base(Configuration):
     )
     # Scope requested for the exchanged token.
     MENSHEN_SCOPE = values.Value("", environ_name="MENSHEN_SCOPE", environ_prefix=None)
+    # upload-broker (tribu destination): sends the archives to Tribu.
+    # Its tokens come from Menshen, with the MENSHEN_CLIENT_* credentials.
+    UPLOAD_BROKER_URL = values.Value(
+        "", environ_name="UPLOAD_BROKER_URL", environ_prefix=None
+    )
+    UPLOAD_BROKER_AUDIENCE = values.Value(
+        "", environ_name="UPLOAD_BROKER_AUDIENCE", environ_prefix=None
+    )
+    UPLOAD_BROKER_SCOPE = values.Value(
+        "", environ_name="UPLOAD_BROKER_SCOPE", environ_prefix=None
+    )
     # Set to False to skip sharing migrated files with workspace members.
     # Members will then manage permissions manually in Drive.
     DRIVE_SHARE_MEMBERS = values.BooleanValue(
