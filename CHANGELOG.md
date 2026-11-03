@@ -14,7 +14,8 @@ and this project adheres to
   ProConnect token is exchanged for a Drive-scoped token (RFC 8693) via
   Menshen (`MENSHEN_*` settings), then used on the Drive external API
 - Add a `tribu` destination. It sends the workspace archive to Tribu through
-  upload-broker (`UPLOAD_BROKER_*` settings). The token comes from Menshen
+  upload-broker (`UPLOAD_BROKER_*` settings). The token comes from Menshen.
+  `TRIBU_FRONTEND_URL` sets the Tribu link shown at the end of a migration
 
 ### Changed
 
