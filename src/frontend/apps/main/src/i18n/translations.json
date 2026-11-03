@@ -18,7 +18,10 @@
       "Voir la documentation": "View documentation",
       "Archive zip": "Zip archive",
       "Votre compte est en attente de validation": "Your account is pending validation",
-      "Votre compte a bien été créé. Un administrateur doit valider votre accès avant que vous puissiez utiliser cet outil.": "Your account has been created. An administrator must validate your access before you can use this tool."
+      "Votre compte a bien été créé. Un administrateur doit valider votre accès avant que vous puissiez utiliser cet outil.": "Your account has been created. An administrator must validate your access before you can use this tool.",
+      "Chaque espace sélectionné sera envoyé à Tribu avec la liste de ses membres.": "Each selected workspace will be sent to Tribu with its list of members.",
+      "Vos espaces vont être envoyés à Tribu. Tribu les importe pendant la nuit et vous enverra un e-mail quand ils seront prêts.": "Your workspaces will be sent to Tribu. Tribu imports them overnight and will send you an email when they are ready.",
+      "Accéder à Tribu": "Go to Tribu"
     }
   },
   "fr": {
