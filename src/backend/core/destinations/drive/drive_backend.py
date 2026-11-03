@@ -722,6 +722,16 @@ class DriveMenshenTokenBackend(DriveUserTokenBackend):
             )
         )
 
+    @property
+    def _audience(self) -> str:
+        """Audience of the exchanged token."""
+        return settings.MENSHEN_AUDIENCE
+
+    @property
+    def _scope(self) -> str:
+        """Scope of the exchanged token."""
+        return settings.MENSHEN_SCOPE
+
     def _get_token(self) -> str:
         """Return a valid exchanged token, refreshing the subject token and
         re-exchanging proactively if near expiry."""
@@ -744,15 +754,15 @@ class DriveMenshenTokenBackend(DriveUserTokenBackend):
             "Drive (Menshen) token exchange for user %s: exchanging the "
             "ProConnect access token for a token scoped to %s",
             self._user.id,
-            settings.MENSHEN_AUDIENCE,
+            self._audience,
         )
         try:
             response = self._exchange_client.exchange(
                 menshen_client.TokenExchangeRequest(
                     subject_token=self._access_token,
                     subject_token_type=menshen_client.TokenType.ACCESS_TOKEN,
-                    audience=settings.MENSHEN_AUDIENCE,
-                    scope=settings.MENSHEN_SCOPE or None,
+                    audience=self._audience,
+                    scope=self._scope or None,
                 )
             )
         except HTTPError as error:
